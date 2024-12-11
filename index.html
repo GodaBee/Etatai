@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbuotojų Etatų Skaičiuoklė</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Darbuotojų Etatų Skaičiuoklė</h1>
+        <!-- Pirmoji skaičiuoklė -->
+        <div class="calculator">
+            <h2>Mėnesio Darbo Valandų Skaičiuoklė</h2>
+            <label for="monthlyHours">Mėnesio darbo valandų poreikis:</label>
+            <input type="number" id="monthlyHours" placeholder="Įveskite valandas">
+
+            <label for="maxHoursPerEmployee">Maksimalios valandos vienam darbuotojui per mėnesį:</label>
+            <input type="number" id="maxHoursPerEmployee" placeholder="Įveskite valandas">
+
+            <label for="absenteeism">Vidutinis nedarbingumas (%):</label>
+            <input type="number" id="absenteeism" placeholder="Įveskite procentą">
+
+            <label for="peakIncrease">Piko laikotarpio valandų padidėjimas (%):</label>
+            <input type="number" id="peakIncrease" placeholder="Įveskite procentą">
+
+            <button id="calculateMonthly">Skaičiuoti</button>
+            <div id="monthlyResult"></div>
+        </div>
+
+        <!-- Antroji skaičiuoklė -->
+        <div class="calculator">
+            <h2>Dienos Darbo Valandų Skaičiuoklė</h2>
+            <label for="dailyHours">Dienos darbo valandų poreikis:</label>
+            <input type="number" id="dailyHours" placeholder="Įveskite valandas">
+
+            <label for="selectDay">Pasirinkite dieną:</label>
+            <select id="selectDay"></select>
+
+            <button id="calculateDaily">Skaičiuoti</button>
+            <div id="dailyResult"></div>
+
+            <button id="addToCalendar">Pridėti prie Kalendoriaus</button>
+            <br>
+            <button id="deleteFromCalendar">Ištrinti iš Kalendoriaus</button>
+        </div>
+
+        <!-- Kalendoriaus atvaizdavimas -->
+        <div class="calendar">
+            <h2>Kalendorinis Atvaizdavimas</h2>
+            <div id="calendarContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
